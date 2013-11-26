@@ -25,8 +25,8 @@ Usage, creation:
     
 event handling:
 
-- (void)clicked:(UIButton *)sender
-{
+    - (void)clicked:(UIButton *)sender
+    {
     // When using GPUImage, put [self.videoCamera rotateCamera]; here,
     // otherwise, handle sender separetely.
     if (!CATransform3DEqualToTransform(sender.layer.transform, CATransform3DIdentity)) {
@@ -42,4 +42,4 @@ event handling:
             NSLog(@"back button selected");
         }
     }
-}
+    }
