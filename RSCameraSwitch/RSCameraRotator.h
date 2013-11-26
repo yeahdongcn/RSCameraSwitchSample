@@ -12,7 +12,7 @@
 
 @optional
 
-- (void)clicked:(id)sender;
+- (void)clicked:(UIButton *)sender;
 
 @end
 

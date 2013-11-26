@@ -12,6 +12,8 @@
 
 @interface RSViewController () <RSCameraRotatorDelegate>
 
+@property (nonatomic, strong) RSCameraRotator *rotator;
+
 @end
 
 @implementation RSViewController
@@ -34,13 +36,13 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    RSCameraRotator *rotator = [[RSCameraRotator alloc] initWithFrame:CGRectMake(100, 100, 165, 50)];
-    rotator.tintColor = [UIColor blackColor];
-    rotator.offColor = [[self class] colorWithARGBHex:0xff498e14];
-    rotator.onColorLight = [[self class] colorWithARGBHex:0xff9dd32a];
-    rotator.onColorDark = [[self class] colorWithARGBHex:0xff66a61b];
-    rotator.delegate = self;
-    [self.view addSubview:rotator];
+    self.rotator = [[RSCameraRotator alloc] initWithFrame:CGRectMake(100, 100, 165, 50)];
+    self.rotator.tintColor = [UIColor blackColor];
+    self.rotator.offColor = [[self class] colorWithARGBHex:0xff498e14];
+    self.rotator.onColorLight = [[self class] colorWithARGBHex:0xff9dd32a];
+    self.rotator.onColorDark = [[self class] colorWithARGBHex:0xff66a61b];
+    self.rotator.delegate = self;
+    [self.view addSubview:self.rotator];
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,9 +51,23 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)clicked:(id)sender
+- (void)clicked:(UIButton *)sender
 {
-    NSLog(@"sender = %@", [sender description]);
+    // When using GPUImage, put [self.videoCamera rotateCamera]; here,
+    // otherwise, handle sender separetely.
+    if (!CATransform3DEqualToTransform(sender.layer.transform, CATransform3DIdentity)) {
+        if (sender == self.rotator.backButton) {
+            NSLog(@"back button selected");
+        } else if (sender == self.rotator.frontButton) {
+            NSLog(@"front button selected");
+        }
+    } else {
+        if (sender == self.rotator.backButton) {
+            NSLog(@"front button selected");
+        } else if (sender == self.rotator.frontButton) {
+            NSLog(@"back button selected");
+        }
+    }
 }
 
 @end
