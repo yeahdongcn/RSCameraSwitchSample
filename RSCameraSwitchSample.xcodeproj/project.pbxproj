@@ -23,6 +23,8 @@
 		D00F09AA184438E20073844B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D00F09A8184438E20073844B /* InfoPlist.strings */; };
 		D00F09AC184438E20073844B /* RSCameraSwitchSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D00F09AB184438E20073844B /* RSCameraSwitchSampleTests.m */; };
 		D00F09BC184439280073844B /* RSCameraRotator.m in Sources */ = {isa = PBXBuildFile; fileRef = D00F09B9184439280073844B /* RSCameraRotator.m */; };
+		D00F09BF184448A00073844B /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D00F09BD184448A00073844B /* back@2x.png */; };
+		D00F09C0184448A00073844B /* front@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D00F09BE184448A00073844B /* front@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		D00F09AB184438E20073844B /* RSCameraSwitchSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSCameraSwitchSampleTests.m; sourceTree = "<group>"; };
 		D00F09B8184439280073844B /* RSCameraRotator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSCameraRotator.h; sourceTree = "<group>"; };
 		D00F09B9184439280073844B /* RSCameraRotator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSCameraRotator.m; sourceTree = "<group>"; };
+		D00F09BD184448A00073844B /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		D00F09BE184448A00073844B /* front@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "front@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +166,8 @@
 		D00F09B5184439280073844B /* RSCameraSwitch */ = {
 			isa = PBXGroup;
 			children = (
+				D00F09BD184448A00073844B /* back@2x.png */,
+				D00F09BE184448A00073844B /* front@2x.png */,
 				D00F09B8184439280073844B /* RSCameraRotator.h */,
 				D00F09B9184439280073844B /* RSCameraRotator.m */,
 			);
@@ -245,8 +251,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D00F09C0184448A00073844B /* front@2x.png in Resources */,
 				D00F0994184438E20073844B /* Main_iPad.storyboard in Resources */,
 				D00F0999184438E20073844B /* Images.xcassets in Resources */,
+				D00F09BF184448A00073844B /* back@2x.png in Resources */,
 				D00F0991184438E20073844B /* Main_iPhone.storyboard in Resources */,
 				D00F0988184438E20073844B /* InfoPlist.strings in Resources */,
 			);
@@ -489,6 +497,7 @@
 				D00F09B1184438E20073844B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D00F09B2184438E20073844B /* Build configuration list for PBXNativeTarget "RSCameraSwitchSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +506,7 @@
 				D00F09B4184438E20073844B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

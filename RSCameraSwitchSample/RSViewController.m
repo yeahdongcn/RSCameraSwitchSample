@@ -36,6 +36,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    self.view.backgroundColor = [UIColor blackColor];
+    
     self.rotator = [[RSCameraRotator alloc] initWithFrame:CGRectMake(100, 100, 165, 50)];
     self.rotator.tintColor = [UIColor blackColor];
     self.rotator.offColor = [[self class] colorWithARGBHex:0xff498e14];
