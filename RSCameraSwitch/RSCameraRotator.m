@@ -60,7 +60,11 @@
     [self clicked:sender shouldResetTheOtherButton:YES];
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(clicked:)]) {
-        [self.delegate clicked:sender];
+        BOOL isFront = NO;
+        if ((CATransform3DEqualToTransform(sender.layer.transform, CATransform3DIdentity) && sender == self.backButton) || (!CATransform3DEqualToTransform(sender.layer.transform, CATransform3DIdentity) && sender == self.frontButton)) {
+            isFront = YES;
+        }
+        [self.delegate clicked:isFront];
     }
 }
 
@@ -197,6 +201,16 @@
     _offColor = offColor;
     self.layer.backgroundColor = [offColor CGColor];
     self.backButton.layer.backgroundColor = [offColor CGColor];
+}
+
+- (void)setDelegate:(id<RSCameraRotatorDelegate>)delegate
+{
+    _delegate = delegate;
+    
+    // Front is selected by default, when set delegate in controller, we send the default selection.
+    if (_delegate && [_delegate respondsToSelector:@selector(clicked:)]) {
+        [_delegate clicked:YES];
+    }
 }
 
 - (id)initWithFrame:(CGRect)frame

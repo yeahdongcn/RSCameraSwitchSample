@@ -12,7 +12,7 @@
 
 @optional
 
-- (void)clicked:(UIButton *)sender;
+- (void)clicked:(BOOL)isFront;
 
 @end
 
