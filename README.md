@@ -25,21 +25,13 @@ Usage, creation:
     
 event handling:
 
-    - (void)clicked:(UIButton *)sender
+    - (void)clicked:(BOOL)isFront
     {
         // When using GPUImage, put [self.videoCamera rotateCamera]; here,
-        // otherwise, handle sender separetely.
-        if (!CATransform3DEqualToTransform(sender.layer.transform, CATransform3DIdentity)) {
-            if (sender == self.rotator.backButton) {
-                NSLog(@"back button selected");
-            } else if (sender == self.rotator.frontButton) {
-                NSLog(@"front button selected");
-            }
+        // Otherwise do:
+        if (isFront) {
+            NSLog(@"front button selected");
         } else {
-            if (sender == self.rotator.backButton) {
-                NSLog(@"front button selected");
-            } else if (sender == self.rotator.frontButton) {
-                NSLog(@"back button selected");
-            }
+            NSLog(@"back button selected");
         }
     }
