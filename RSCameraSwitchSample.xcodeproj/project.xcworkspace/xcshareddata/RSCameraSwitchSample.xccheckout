@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1DA10354-DA35-4ABD-A44F-86CE26A307C4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RSCameraSwitchSample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D2209644-4398-43AB-955A-3CC69193F4FC</key>
+		<string>https://github.com/yeahdongcn/RSCameraSwitchSample.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>RSCameraSwitchSample.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D2209644-4398-43AB-955A-3CC69193F4FC</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/yeahdongcn/RSCameraSwitchSample.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D2209644-4398-43AB-955A-3CC69193F4FC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D2209644-4398-43AB-955A-3CC69193F4FC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RSCameraSwitchSample</string>
+		</dict>
+	</array>
+</dict>
+</plist>
