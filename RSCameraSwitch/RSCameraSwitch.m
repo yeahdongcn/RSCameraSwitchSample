@@ -1,16 +1,16 @@
 //
-//  RSCameraRotator.m
-//  Greent
+//  RSCameraSwitch.m
+//  RSCameraSwitchSample
 //
 //  Created by R0CKSTAR on 11/23/13.
 //  Copyright (c) 2013 P.D.Q. All rights reserved.
 //
 
-#import "RSCameraRotator.h"
+#import "RSCameraSwitch.h"
 
 #import <AVFoundation/AVFoundation.h>
 
-@interface RSCameraRotator ()
+@interface RSCameraSwitch ()
 
 @property (nonatomic) CGFloat cornerRadius;
 
@@ -24,7 +24,7 @@
 
 @end
 
-@implementation RSCameraRotator
+@implementation RSCameraSwitch
 
 - (void)clicked:(UIButton *)sender shouldResetTheOtherButton:(BOOL)shouldReset
 {
@@ -203,7 +203,7 @@
     self.backButton.layer.backgroundColor = [offColor CGColor];
 }
 
-- (void)setDelegate:(id<RSCameraRotatorDelegate>)delegate
+- (void)setDelegate:(id<RSCameraSwitchDelegate>)delegate
 {
     _delegate = delegate;
     

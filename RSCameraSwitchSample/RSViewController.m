@@ -8,11 +8,11 @@
 
 #import "RSViewController.h"
 
-#import "RSCameraRotator.h"
+#import "RSCameraSwitch.h"
 
-@interface RSViewController () <RSCameraRotatorDelegate>
+@interface RSViewController () <RSCameraSwitchDelegate>
 
-@property (nonatomic, strong) RSCameraRotator *rotator;
+@property (nonatomic, strong) RSCameraSwitch *cameraSwitch;
 
 @end
 
@@ -38,13 +38,13 @@
     
     self.view.backgroundColor = [UIColor blackColor];
     
-    self.rotator = [[RSCameraRotator alloc] initWithFrame:CGRectMake(100, 100, 165, 50)];
-    self.rotator.tintColor = [UIColor blackColor];
-    self.rotator.offColor = [[self class] colorWithARGBHex:0xff498e14];
-    self.rotator.onColorLight = [[self class] colorWithARGBHex:0xff9dd32a];
-    self.rotator.onColorDark = [[self class] colorWithARGBHex:0xff66a61b];
-    self.rotator.delegate = self;
-    [self.view addSubview:self.rotator];
+    self.cameraSwitch = [[RSCameraSwitch alloc] initWithFrame:CGRectMake(100, 100, 165, 50)];
+    self.cameraSwitch.tintColor = [UIColor blackColor];
+    self.cameraSwitch.offColor = [[self class] colorWithARGBHex:0xff498e14];
+    self.cameraSwitch.onColorLight = [[self class] colorWithARGBHex:0xff9dd32a];
+    self.cameraSwitch.onColorDark = [[self class] colorWithARGBHex:0xff66a61b];
+    self.cameraSwitch.delegate = self;
+    [self.view addSubview:self.cameraSwitch];
 }
 
 - (void)didReceiveMemoryWarning
